@@ -218,7 +218,7 @@ const applicationHostConfigTemplate = `<?xml version="1.0" encoding="UTF-8"?>
   <system.applicationHost>
 
     <applicationPools>
-		<add name="AppPool{{.Config.Port}}" managedRuntimeVersion="v4.0" managedPipelineMode="Integrated" CLRConfigFile="{{.Config.AspnetConfigPath}}" autoStart="true" startMode="AlwaysRunning" />
+		<add name="AppPool{{.Config.Port}}" managedRuntimeVersion="v4.0" managedPipelineMode="Integrated" CLRConfigFile="{{.Config.AspnetConfigPath}}" autoStart="true" startMode="AlwaysRunning" enable32BitAppOnWin64="true" />
     </applicationPools>
 
     <listenerAdapters>
